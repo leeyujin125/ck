@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery비교</title>
+
+    <!-- https://jquery.com  -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        function mygugudan(){
+            var message='';
+            var dan=1;
+            //1번째권장 dan = document.getElementById("gugu").value ; 
+            //2번째 dan = document.myform.gugu.value ; 
+            //3번째 dan = document.querySelector("#gugu").value ; 
+            dan = $("#gugu").val(); //jQuery 더 간략하게 접근
+            for(var i=1; i<10; i++){
+              message = message +  dan + '*' + i + '=' + (dan*i) +'<br>';
+              //대입연산 message +=  dan + '*' + i + '=' + (dan*i) +'<br>'; //대입연산
+            }
+            message = message + "<img src='images/bar.gif' width=350> <br>";
+             
+            //document.getElementById("display").innerHTML = message ; //고전적인=정석
+            //document.getElementById("display").innerText = message ; //고전적인=정석
+
+            $("#display").html( message) ; //jQuery
+            //$("#display").text(message);//jQuery
+        }//end
+    </script>
+</head>
+<body>
+    <p style="margin-bottom: 30px;"></p> 
+    <h2> 05 2:15 jQuery접근 </h2>
+    <form name="myform">
+        구구단입력: <input type="text" name="gugu"  id="gugu">
+        <input type="button" value="구구단처리" onclick="mygugudan()">
+    </form> 
+
+    <div id="display"></div>
+    <br>  
+    <img src="images/top.jpg" width="350" height="150">
+    
+</body>
+</html>

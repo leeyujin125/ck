@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+
+<!-- https://jquery.com  -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<style>
+    *{font-size: 20pt;}
+</style>
+
+<script>
+ $(function(){
+    $('#btn1').click(function(){
+      $('#btn1').css("background-color", "pink");
+      $('#btn1').css("border", "2px solid yellow");
+      $('#btn1').css("width", "100px");
+      $('#btn1').css("height", "70px");
+      $('#display').html("<h2>버튼1을 눌렸습니다</h2>");
+    });
+
+
+    $('#btn2').click(function(){
+      $(this).css("background-color", "orange");
+      $(this).css("border", "2px solid black");
+      $(this).css("width", "100px");
+      $(this).css("height", "70px");
+      $('#display').html("<h2>버튼2을 눌렸습니다</h2>");
+    });
+
+    $('#btn3').click(function(){
+      $('#btn3').css({
+        "background-color": "#abcdef" ,
+        "border" : "2px solid red" ,
+        "width" : "100px" ,
+        "height" : "70px"
+      });
+      $('#display').html("<h2>버튼3을 눌렸습니다</h2>");
+    });
+ });
+</script>
+
+</head>
+<body>
+    <input type="button"  id="btn1"  value="버튼1" >
+    <input type="button"  id="btn2"  value="버튼2">
+    <input type="button"  id="btn3"  value="버튼3">
+
+    <p></p>
+    <div id="display"></div>
+</body>
+</html>

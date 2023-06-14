@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 01gugudan</title>
+    <script>
+        function mygugudan(){
+            var message='';
+            var dan=1;
+            dan = document.getElementById("gugu").value ; 
+              var x = dan + '*' + 1 + '=' + (dan*1) +'<br>';
+              var y = dan + '*' + 2 + '=' + (dan*2) +'<br>';
+              var z = dan + '*' + 3 + '=' + (dan*3) +'<br>';
+              var a = dan + '*' + 4 + '=' + (dan*4) +'<br>';
+              var b = dan + '*' + 5 + '=' + (dan*5) +'<br>';
+              var c = dan + '*' + 6 + '=' + (dan*6) +'<br>';
+              var d = dan + '*' + 7 + '=' + (dan*7) +'<br>';
+              var e = dan + '*' + 8 + '=' + (dan*8) +'<br>';
+              var f = dan + '*' + 9 + '=' + (dan*9) +'<br>';
+              message = x+y+z+a+b+c+d+e+f;
+            document.getElementById("display").innerHTML = message ;
+        }//end
+    </script>
+</head>
+<body>
+    <p style="margin-bottom: 30px;"></p> 
+    <h2> 01gugudan.html </h2>
+
+    <form>
+        구구단입력: <input type="text" id="gugu">
+        <input type="button" value="구구단처리" onclick="mygugudan()">
+    </form> 
+
+    <div id="display"></div>
+    <br>  
+    <img src="images/main_4.jpg" width="350" height="150">
+    
+</body>
+</html>
